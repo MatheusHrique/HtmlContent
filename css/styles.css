@@ -1,0 +1,112 @@
+:root { /* Define variáveis CSS que podem ser reutilizadas, ajudando na manutenção do código. */
+    --background-color: #f5f5f5; /* Define a cor de fundo padrão para a página. #f5f5f5 é um tom de cinza claro. */
+    --text-color: #000; /* Define a cor do texto padrão. #000 é preto. */
+    --header-background: #333; /* Define a cor de fundo do cabeçalho. #333 é um tom de cinza escuro. */
+    --header-text: #fff; /* Define a cor do texto do cabeçalho. #fff é branco. */
+    --title-color: #4CAF50; /* Define a cor dos títulos (h1, h2, etc.). #4CAF50 é um tom de verde. */
+    --footer-background: #333; /* Define a cor de fundo do rodapé, que também é cinza escuro. */
+    --footer-text: #fff; /* Define a cor do texto do rodapé, que também é branco. */
+}
+/* :root */
+/* Define variáveis CSS personalizadas (também conhecidas como variáveis CSS) que podem ser 
+reutilizadas em toda a folha de estilos. Isso torna a manutenção do código mais fácil e eficiente. */
+
+body { /* Define o estilo global do corpo da página */
+    font-family: 'Arial', sans-serif; /* Define a família de fontes usada no texto. Arial é uma fonte sans-serif comum. */
+    padding: 0; /* Remove qualquer espaçamento interno padrão do elemento body. Existe como mudar o espaçamento interno especificamente de um lado através de padding-left, padding-right, padding-top, padding-bottom */
+    background-color: var(--background-color); /* Define a cor de fundo usando a variável CSS --background-color. */
+    color: var(--text-color); /* Define a cor do texto usando a variável CSS --text-color. */
+    transition: background-color 0.3s, color 0.3s; /* Adiciona uma transição suave de 0.3 segundos para mudanças na cor de fundo e cor do texto. */
+    margin: 20px; /* Define uma margem ao redor do corpo da página. Assim como padding, também existe margin-left, margin-right, margim-top e margim-bottom */
+    line-height: 1.6; /* Define a altura das linhas de texto para melhorar a legibilidade. */
+}
+/* body */
+/* Define o estilo geral do corpo da página, incluindo a família de fontes, cores de fundo e texto, 
+transições suaves entre cores, margens e espaçamento entre linhas. */
+
+header { /*Estiliza o cabeçalho.*/
+    background-color: var(--header-background); /* Define a cor de fundo do cabeçalho usando a variável CSS --header-background. */
+    color: var(--header-text); /* Define a cor do texto do cabeçalho usando a variável CSS --header-text. */
+    padding: 20px; /* Adiciona espaçamento interno ao cabeçalho. */
+    text-align: center; /* Centraliza o texto dentro do cabeçalho. */
+    display: flex; /* Usa Flexbox para o layout do cabeçalho. */
+    /* Flexbox é um modelo de layout no CSS que facilita a criação de layouts flexíveis e responsivos. Ele é ótimo 
+    para distribuir espaço dentro de um contêiner e alinhar os itens de forma eficiente */
+    /* Este é o elemento pai que tem a propriedade display configurada como flex. Todos os 
+    elementos filhos dentro desse contêiner se tornam itens flexíveis.
+
+    .container {
+        display: flex;
+    }
+
+    Logo, tudo o que estiver dentro do elemento com "class=container", todos os filhos se tornará itens flexíveis.
+    Site para aprender mais de forma detalhada Flexbox: https://flexboxfroggy.com/
+    */
+
+    justify-content: space-between; /* Espaça igualmente os elementos filhos dentro do cabeçalho. */
+    align-items: center; /* Alinha verticalmente os itens do cabeçalho ao centro. */
+}
+/* header */
+/* Estiliza o cabeçalho da página, definindo cores de fundo e texto, espaçamento interno, 
+alinhamento do texto e estrutura do layout usando Flexbox. */
+
+header h1 { /* Estiliza o título dentro do cabeçalho. */
+    margin: 0; /* Remove margens do elemento h1. */
+    flex: 1; /* Faz o elemento h1 ocupar todo o espaço disponível dentro do cabeçalho. */
+}
+/* header h1 */
+/* Estiliza o título dentro do cabeçalho, garantindo que ele ocupe todo o espaço possível e removendo margens. */
+
+header p { /* Estiliza parágrafos dentro do cabeçalho. */
+    margin: 0 10px; /* Define margens laterais de 10px ao redor do parágrafo. */
+    margin-bottom: 30px; /* Adiciona uma margem inferior de 30px ao parágrafo. */
+    text-align: center; /* Centraliza o texto dentro do parágrafo. */
+}
+/* header p */
+/* Estiliza os parágrafos dentro do cabeçalho, ajustando as margens para centralização e espaçamento adequado. */
+
+header button { /* Estiliza botões dentro do cabeçalho. */
+    background: none; /* Remove o fundo padrão do botão. */
+    border: 2px solid var(--header-text); /* Define uma borda de 2px usando a cor do texto do cabeçalho. */
+    color: var(--header-text); /* Define a cor do texto do botão usando a variável CSS --header-text. */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o botão. */
+    margin-left: 10px; /* Adiciona uma margem esquerda de 10px ao botão. */
+    margin: 5px; /* Define uma margem geral de 5px ao botão. */
+    padding: 10px 15px; /* Adiciona espaçamento interno ao botão. */
+    border-radius: 5px; /* Arredonda as bordas do botão. */
+    font-size: 16px; /* Define o tamanho da fonte do botão. */
+}
+header button:hover { /* Estiliza o botão ao passar o mouse por cima. */
+    background-color: var(--header-text); /* Define a cor de fundo ao passar o mouse sobre o botão. */
+    color: var(--header-background); /* Define a cor do texto ao passar o mouse sobre o botão. */
+}
+/* header button */
+/* Estiliza os botões dentro do cabeçalho, definindo bordas, cores, comportamento ao passar o mouse e espaçamento. */
+
+h1, h2 { /* Define o estilo dos títulos. */
+    color: var(--title-color); /* Define a cor dos títulos (h1 e h2) usando a variável CSS --title-color. */
+    margin-top: 0; /* Remove a margem superior dos títulos. */
+}
+/* h1, h2 */
+/* Define a cor dos títulos e remove a margem superior para que estejam bem alinhados. */
+
+body.dark { /* Define as variáveis para o tema escuro. */
+    --background-color: #333; /* Define a cor de fundo do tema escuro. */
+    --text-color: #fff; /* Define a cor do texto do tema escuro. */
+    --header-background: #222; /* Define a cor de fundo do cabeçalho no tema escuro. */
+    --header-text: #FFA500; /* Define a cor do texto do cabeçalho no tema escuro. */
+    --title-color: #FFD700; /* Define a cor dos títulos no tema escuro. */
+    --footer-background: #222; /* Define a cor de fundo do rodapé no tema escuro. */
+    --footer-text: #FFA500; /* Define a cor do texto do rodapé no tema escuro. */
+}
+header.dark button { /* Estiliza os botões no tema escuro. */
+    border-color: #FFA500; /* Define a cor da borda do botão no tema escuro. */
+    color: #FFA500; /* Define a cor do texto do botão no tema escuro. */
+}
+header.dark button:hover { /* Estiliza o botão ao passar o mouse no tema escuro. */
+    background-color: #FFA500; /* Define a cor de fundo ao passar o mouse sobre o botão no tema escuro. */
+    color: #222; /* Define a cor do texto ao passar o mouse sobre o botão no tema escuro. */
+}
+/* Tema Escuro */
+/* Quando a classe dark é adicionada ao body, essas variáveis CSS são atualizadas 
+para cores mais escuras, permitindo uma rápida mudança de tema. */
